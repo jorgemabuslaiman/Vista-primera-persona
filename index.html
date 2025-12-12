@@ -21,7 +21,7 @@
         <a-scene   shadow="type: basic; autoUpdate: false;" renderer="antialias: false; colorManagement: false; physicallyCorrectLights: false;">
             <!-- Assets -->
             <a-assets>
-				<a-asset-item id="MainMesh" src="./assets/MainMesh.gltf"></a-asset-item>
+                <a-asset-item id="MainMesh" src="./assets/MainMesh.gltf"></a-asset-item>
                 <img id="sky"                 src="./resources/sky.jpg">
                 <img id="icon-play"           src="./resources/play.png">
                 <img id="icon-pause"          src="./resources/pause.png">
@@ -33,7 +33,7 @@
 
             <!-- Entities -->
             
-			<a-entity id="#MainMesh" gltf-model="#MainMesh" scale="1 1 1" visible="true" shadow="cast: false"></a-entity>
+            <a-entity id="MainMesh" gltf-model="#MainMesh" scale="1 1 1" visible="true" shadow="cast: false" class="raycastable"></a-entity>
 
             <!-- Camera -->
             <a-entity id="player" 
@@ -43,7 +43,7 @@
                     camera="near: 0.001" 
                     position="0 1.7000000476837158 0" 
                     look-controls="pointerLockEnabled: true">
-                        <a-entity id="cursor" cursor="fuse: false;" animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 50; from: 	0.1 0.1 0.1; to: 1 1 1"
+                        <a-entity id="cursor" cursor="fuse: false;" raycaster="objects: .raycastable" animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 50; from: 0.1 0.1 0.1; to: 1 1 1"
                             position="0 0 -0.1"
                             geometry="primitive: circle; radius: 0.001;"
                             material="color: #CCC; shader: flat;"
