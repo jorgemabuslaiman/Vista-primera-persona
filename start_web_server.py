@@ -6,7 +6,7 @@ from http.server import HTTPServer, SimpleHTTPRequestHandler
 
 ip = "127.0.0.1"
 port = 3600
-url = f"http://{localhost}:{8001}"
+url = f"http://{ip}:{port}"
 server_address = (ip, port)
 
 httpd = HTTPServer(server_address, SimpleHTTPRequestHandler)

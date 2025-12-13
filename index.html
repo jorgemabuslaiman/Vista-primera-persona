@@ -18,10 +18,11 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body onload="init();">
-        <a-scene   shadow="type: basic; autoUpdate: false;" renderer="antialias: false; colorManagement: false; physicallyCorrectLights: false;">
+        <a-scene   shadow="type: basic; autoUpdate: false;" renderer="antialias: true; colorManagement: true; physicallyCorrectLights: true;">
             <!-- Assets -->
             <a-assets>
-                <a-asset-item id="MainMesh" src="./assets/MainMesh.gltf"></a-asset-item>
+				<a-asset-item id="cartoon_building" src="./assets/cartoon_building.gltf"></a-asset-item>
+				<a-asset-item id="cartoon_building_grp" src="./assets/cartoon_building_grp.gltf"></a-asset-item>
                 <img id="sky"                 src="./resources/sky.jpg">
                 <img id="icon-play"           src="./resources/play.png">
                 <img id="icon-pause"          src="./resources/pause.png">
@@ -33,17 +34,18 @@
 
             <!-- Entities -->
             
-            <a-entity id="MainMesh" gltf-model="#MainMesh" scale="1 1 1" visible="true" shadow="cast: false" class="raycastable"></a-entity>
+			<a-entity id="#cartoon_building" gltf-model="#cartoon_building"  scale="1 1 1" position="6.855414390563965 39.2062873840332 -66.71770477294922" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#cartoon_building_grp"   scale="1 1 1" position="-5.469764232635498 25.22780418395996 -10.291142463684082" visible="true" shadow="cast: false" ></a-entity>
 
             <!-- Camera -->
             <a-entity id="player" 
                 position="0 -0.2 0" 
-                movement-controls="speed: 0.10000000149011612;">
+                movement-controls="speed: 1.4199999570846558;">
                 <a-entity id="camera" 
                     camera="near: 0.001" 
                     position="0 1.7000000476837158 0" 
                     look-controls="pointerLockEnabled: true">
-                        <a-entity id="cursor" cursor="fuse: false;" raycaster="objects: .raycastable" animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 50; from: 0.1 0.1 0.1; to: 1 1 1"
+                        <a-entity id="cursor" cursor="fuse: false;" animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 50; from: 	0.1 0.1 0.1; to: 1 1 1"
                             position="0 0 -0.1"
                             geometry="primitive: circle; radius: 0.001;"
                             material="color: #CCC; shader: flat;"
@@ -58,7 +60,7 @@
             
 
             <!-- Sky -->
-            <a-sky color="#ECECEC"></a-sky>
+            <a-sky src="#sky" material="" geometry="" rotation="0 90 0"></a-sky>
         </a-scene>
     </body>
 </html>

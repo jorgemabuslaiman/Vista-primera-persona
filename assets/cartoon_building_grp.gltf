@@ -1,0 +1,39 @@
+{
+	"asset":{
+		"generator":"Khronos glTF Blender I/O v3.5.30",
+		"version":"2.0"
+	},
+	"scene":0,
+	"scenes":[
+		{
+			"extras":{
+				"b_export":1,
+				"export_path":"C:\\Users\\IdeaPad Slim 3\\Desktop\\",
+				"s_output":"exporting...",
+				"b_player":0,
+				"f_player_speed":1.4199999570846558,
+				"b_renderer":0,
+				"b_physicallyCorrectLights":1,
+				"b_colorManagement":1,
+				"b_aa":1,
+				"b_settings":1,
+				"b_raycast":0,
+				"b_interactive":1,
+				"b_show_env_sky":1,
+				"b_cubemap_background":1
+			},
+			"name":"Scene",
+			"nodes":[
+				0
+			]
+		}
+	],
+	"nodes":[
+		{
+			"extras":{
+				"MaxHandle":2
+			},
+			"name":"cartoon_building_grp"
+		}
+	]
+}
