@@ -16,7 +16,7 @@
 				"b_physicallyCorrectLights":1,
 				"b_colorManagement":1,
 				"b_aa":1,
-				"b_settings":1,
+				"b_settings":0,
 				"b_raycast":0,
 				"b_interactive":1,
 				"b_show_env_sky":1,
@@ -34,6 +34,111 @@
 				"MaxHandle":2
 			},
 			"name":"cartoon_building_grp"
+		}
+	],
+	"animations":[
+		{
+			"channels":[
+				{
+					"sampler":0,
+					"target":{
+						"node":0,
+						"path":"translation"
+					}
+				},
+				{
+					"sampler":1,
+					"target":{
+						"node":0,
+						"path":"rotation"
+					}
+				},
+				{
+					"sampler":2,
+					"target":{
+						"node":0,
+						"path":"scale"
+					}
+				}
+			],
+			"name":"cartoon_building_grp",
+			"samplers":[
+				{
+					"input":0,
+					"interpolation":"LINEAR",
+					"output":1
+				},
+				{
+					"input":0,
+					"interpolation":"LINEAR",
+					"output":2
+				},
+				{
+					"input":0,
+					"interpolation":"LINEAR",
+					"output":3
+				}
+			]
+		}
+	],
+	"accessors":[
+		{
+			"bufferView":0,
+			"componentType":5126,
+			"count":2,
+			"max":[
+				0.03333333333333333
+			],
+			"min":[
+				0
+			],
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":1,
+			"componentType":5126,
+			"count":2,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":2,
+			"componentType":5126,
+			"count":2,
+			"type":"VEC4"
+		},
+		{
+			"bufferView":3,
+			"componentType":5126,
+			"count":2,
+			"type":"VEC3"
+		}
+	],
+	"bufferViews":[
+		{
+			"buffer":0,
+			"byteLength":8,
+			"byteOffset":0
+		},
+		{
+			"buffer":0,
+			"byteLength":24,
+			"byteOffset":8
+		},
+		{
+			"buffer":0,
+			"byteLength":32,
+			"byteOffset":32
+		},
+		{
+			"buffer":0,
+			"byteLength":24,
+			"byteOffset":64
+		}
+	],
+	"buffers":[
+		{
+			"byteLength":88,
+			"uri":"data:application/octet-stream;base64,AAAAAImICD0AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAIAuvbuyAAAAAAAAAIAAAIA/Lr27sgAAAAAAAACAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AACAPw=="
 		}
 	]
 }
